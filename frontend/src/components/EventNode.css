@@ -1,0 +1,138 @@
+.event-node {
+  position: relative;
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.event-node:hover {
+  border-color: #22d3ee;
+  box-shadow: 0 8px 32px rgba(34, 211, 238, 0.2);
+}
+
+.event-node:hover .ripple-effect {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.3), transparent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+}
+
+.node-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.node-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.node-country {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.node-title {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.node-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.meta-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.meta-label {
+  font-size: 0.7rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 50px;
+}
+
+.meta-value {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.meta-value.hash {
+  font-family: 'Courier New', monospace;
+  color: #22d3ee;
+}
+
+/* Expanded Section */
+.node-expanded {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.provenance-section h4 {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dag-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dag-node {
+  padding: 0.5rem;
+  background: rgba(34, 211, 238, 0.1);
+  border-left: 2px solid #22d3ee;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.dag-node.child {
+  margin-left: 1.5rem;
+  border-color: #64748b;
+  background: rgba(100, 116, 139, 0.1);
+}

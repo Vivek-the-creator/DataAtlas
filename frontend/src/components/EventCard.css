@@ -1,0 +1,59 @@
+.event-card {
+  position: absolute;
+  width: 320px;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 1rem;
+  pointer-events: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+  margin-bottom: 0.75rem;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hash-line,
+.timestamp-line {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hash {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #22d3ee;
+  font-weight: 500;
+}
+
+.timestamp {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
